@@ -18,15 +18,15 @@
 * @brief Manages/creates a bunch of ExprControls by using expression text
 * @author  aselle
 */
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QToolButton>
-#include <QtGui/QPushButton>
-#include <QtGui/QRadioButton>
-#include <QtGui/QFormLayout>
-#include <QtGui/QDialogButtonBox>
-#include <QtGui/QColorDialog>
-#include <QtGui/QLabel>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QToolButton>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
+#include <QtWidgets/QFormLayout>
+#include <QtWidgets/QDialogButtonBox>
+#include <QtWidgets/QColorDialog>
+#include <QtWidgets/QLabel>
 #include "ExprEditor.h"
 #include "ExprHighlighter.h"
 #include "ExprCompletionModel.h"

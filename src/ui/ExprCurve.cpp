@@ -22,16 +22,16 @@
 #include <iostream>
 #include <algorithm>
 
-#include <QtGui/QDialog>
+#include <QtWidgets/QDialog>
 #include <QtGui/QDoubleValidator>
-#include <QtGui/QGraphicsSceneMouseEvent>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QLabel>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QPushButton>
+#include <QtWidgets/QGraphicsSceneMouseEvent>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QPushButton>
 #include <QtGui/QResizeEvent>
-#include <QtGui/QDialogButtonBox>
-#include <QtGui/QMenu>
+#include <QtWidgets/QDialogButtonBox>
+#include <QtWidgets/QMenu>
 
 #include <SeExpr2/ExprBuiltins.h>
 #include <cfloat>

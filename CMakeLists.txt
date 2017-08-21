@@ -164,8 +164,8 @@ if (NOT CMAKE_BUILD_TYPE)
       FORCE)
 endif()
 
-find_package(Qt4 COMPONENTS QtCore QtGui QtOpenGL)
-if (QT4_FOUND)
+find_package (Qt5 COMPONENTS Core Gui Widgets OpenGL)
+if (Qt5_FOUND)
     include_directories(${QT_INCLUDE_DIR})
 endif()
 

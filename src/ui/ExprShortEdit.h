@@ -25,8 +25,8 @@
 #include <vector>
 #include <string>
 
-#include <QtGui/QWidget>
-#include <QtGui/QTextEdit>
+#include <QtWidgets/QWidget>
+#include <QtWidgets/QTextEdit>
 #include <QtGui/QWheelEvent>
 
 class ExprControlCollection;

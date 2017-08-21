@@ -4,8 +4,8 @@
 #include <vector>
 #include <QtCore/QObject>
 #include <SeExpr2/Vec.h>
-#include <QtGui/QFrame>
-#include <QtGui/QWidget>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QWidget>
 
 class QGridLayout;
 

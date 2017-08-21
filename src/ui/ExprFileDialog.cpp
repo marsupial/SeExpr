@@ -19,9 +19,9 @@
 
 #include "ExprFileDialog.h"
 
-#include <QtGui/QToolButton>
+#include <QtWidgets/QToolButton>
 #include <QtGui/QPalette>
-#include <QtGui/QMenu>
+#include <QtWidgets/QMenu>
 #include <QtCore/QTimer>
 #include <QtCore/QUrl>
 #include <iostream>

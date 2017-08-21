@@ -18,32 +18,32 @@
 * @brief UI control widgets for expressions.
 * @author  aselle
 */
-#include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
-#include <QtGui/QToolButton>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QToolButton>
 #include <QtCore/QRegExp>
-#include <QtGui/QSplitter>
-#include <QtGui/QLabel>
+#include <QtWidgets/QSplitter>
+#include <QtWidgets/QLabel>
 #include <QtGui/QMouseEvent>
 #include <QtGui/QKeyEvent>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QVBoxLayout>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QVBoxLayout>
 #include <QtGui/QPaintEvent>
 #include <QtGui/QPainter>
-#include <QtGui/QScrollArea>
-#include <QtGui/QSpacerItem>
-#include <QtGui/QSizePolicy>
+#include <QtWidgets/QScrollArea>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QSizePolicy>
 #include <QtGui/QTextCharFormat>
-#include <QtGui/QCompleter>
-#include <QtGui/QAbstractItemView>
+#include <QtWidgets/QCompleter>
+#include <QtWidgets/QAbstractItemView>
 #include <QtGui/QStandardItemModel>
-#include <QtGui/QStringListModel>
-#include <QtGui/QFileDialog>
-#include <QtGui/QDialogButtonBox>
-#include <QtGui/QScrollBar>
-#include <QtGui/QToolTip>
-#include <QtGui/QListWidget>
-#include <QtGui/QTreeView>
+#include <QtCore/QStringListModel>
+#include <QtWidgets/QFileDialog>
+#include <QtWidgets/QDialogButtonBox>
+#include <QtWidgets/QScrollBar>
+#include <QtWidgets/QToolTip>
+#include <QtWidgets/QListWidget>
+#include <QtWidgets/QTreeView>
 
 #include "ExprControl.h"
 #include "ExprColorCurve.h"

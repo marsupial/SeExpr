@@ -21,9 +21,9 @@
 #include <vector>
 
 #include <QtCore/QObject>
-#include <QtGui/QGraphicsPolygonItem>
-#include <QtGui/QGraphicsView>
-#include <QtGui/QLineEdit>
+#include <QtWidgets/QGraphicsPolygonItem>
+#include <QtWidgets/QGraphicsView>
+#include <QtWidgets/QLineEdit>
 
 #include <cmath>
 #include <iostream>

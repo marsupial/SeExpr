@@ -2,18 +2,18 @@
 #include <sstream>
 #include <algorithm>
 
-#include <QtGui/QColorDialog>
+#include <QtWidgets/QColorDialog>
 #include <QtGui/QDoubleValidator>
-#include <QtGui/QGraphicsSceneMouseEvent>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QGridLayout>
+#include <QtWidgets/QGraphicsSceneMouseEvent>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QGridLayout>
 #include <QtGui/QResizeEvent>
-#include <QtGui/QPushButton>
-#include <QtGui/QDialogButtonBox>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QDialogButtonBox>
 #include <QtGui/QPainter>
-#include <QtGui/QMenu>
-#include <QtGui/QLabel>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QLabel>
 
 #include <SeExpr2/ExprBuiltins.h>
 #ifdef SEEXPR_USE_QDGUI

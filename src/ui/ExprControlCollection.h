@@ -22,14 +22,14 @@
 #define _ExprControlCollection_h
 #include <vector>
 
-#include <QtGui/QTextBrowser>
-#include <QtGui/QPlainTextEdit>
-#include <QtGui/QDialog>
+#include <QtWidgets/QTextBrowser>
+#include <QtWidgets/QPlainTextEdit>
+#include <QtWidgets/QDialog>
 #include <QtCore/QTimer>
 #include <QtCore/QRegExp>
-#include <QtGui/QLineEdit>
-#include <QtGui/QCheckBox>
-#include <QtGui/QSlider>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QSlider>
 #include "ExprControl.h"
 
 class QVBoxLayout;

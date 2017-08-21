@@ -18,31 +18,31 @@
 * @brief This provides an expression editor for SeExpr syntax with auto ui features
 * @author  aselle
 */
-#include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
 #include <QtCore/QRegExp>
-#include <QtGui/QSplitter>
-#include <QtGui/QLabel>
+#include <QtWidgets/QSplitter>
+#include <QtWidgets/QLabel>
 #include <QtGui/QMouseEvent>
 #include <QtGui/QKeyEvent>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QVBoxLayout>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QVBoxLayout>
 #include <QtGui/QPaintEvent>
 #include <QtGui/QPainter>
-#include <QtGui/QScrollArea>
-#include <QtGui/QSpacerItem>
-#include <QtGui/QSizePolicy>
+#include <QtWidgets/QScrollArea>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QSizePolicy>
 #include <QtGui/QTextCharFormat>
-#include <QtGui/QCompleter>
-#include <QtGui/QAbstractItemView>
+#include <QtWidgets/QCompleter>
+#include <QtWidgets/QAbstractItemView>
 #include <QtGui/QStandardItemModel>
-#include <QtGui/QStringListModel>
-#include <QtGui/QScrollBar>
-#include <QtGui/QToolTip>
-#include <QtGui/QListWidget>
-#include <QtGui/QTreeView>
-#include <QtGui/QAction>
-#include <QtGui/QMenu>
+#include <QtCore/QStringListModel>
+#include <QtWidgets/QScrollBar>
+#include <QtWidgets/QToolTip>
+#include <QtWidgets/QListWidget>
+#include <QtWidgets/QTreeView>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QMenu>
 
 #include <SeExpr2/Expression.h>
 #include <SeExpr2/ExprNode.h>

@@ -25,10 +25,10 @@
 #include <vector>
 
 #include <QtCore/QObject>
-#include <QtGui/QComboBox>
-#include <QtGui/QGraphicsProxyWidget>
-#include <QtGui/QGraphicsView>
-#include <QtGui/QLineEdit>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QGraphicsProxyWidget>
+#include <QtWidgets/QGraphicsView>
+#include <QtWidgets/QLineEdit>
 
 #include <SeExpr2/Vec.h>
 

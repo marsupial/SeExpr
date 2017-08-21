@@ -44,8 +44,7 @@ set(CMAKE_INSTALL_PYTHON "${PYTHON_SITE}/SeExpr2" )
 # Other package dependencies...
 find_package(OpenGL)
 
-if(QT4_FOUND)
-
+if(Qt5_FOUND)
     BuildParserScanner(ExprSpecParserLex ExprSpecParser ExprSpec
                        editor_parser_cpp)
 
@@ -63,7 +62,7 @@ if(QT4_FOUND)
         ExprControlCollection.cpp ExprGrapher2d.cpp ExprBrowser.cpp
         BasicExpression.cpp ExprDeepWater.cpp)
 
-    qt4_wrap_cpp(EDITOR_MOC_SRCS ${EDITOR_MOC_HDRS})
+    qt5_wrap_cpp(EDITOR_MOC_SRCS ${EDITOR_MOC_HDRS})
 
     if (DEFINED ANIMLIB_DIR)
         set(CE_MOC_HDRS CE/CECurveListUI.h CE/CEDragHandlers.h CE/CEGraphCurve.h
@@ -74,7 +73,7 @@ if(QT4_FOUND)
             CE/CEGraphKey.cpp CE/CEGraphSeg.cpp CE/CEGraphUI.cpp CE/CEMainUI.cpp
             CE/CESegEditUI.cpp CE/CETool.cpp)
 
-        qt4_wrap_cpp(CE_MOC_SRCS ${CE_MOC_HDRS})
+        qt5_wrap_cpp(CE_MOC_SRCS ${CE_MOC_HDRS})
     endif()
 
     if (WIN32)
@@ -92,12 +91,12 @@ if(QT4_FOUND)
                     ${editor_parser_cpp})
     endif()
 
-    include_directories(${QT_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}
+    include_directories(${Qt5Core_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR}
                         ${CMAKE_CURRENT_SOURCE_DIR}/CE)
     target_link_libraries(SeExpr2Editor SeExpr2)
-    target_link_libraries(SeExpr2Editor ${QT_QTCORE_LIBRARY})
-    target_link_libraries(SeExpr2Editor ${QT_QTGUI_LIBRARY})
-    target_link_libraries(SeExpr2Editor ${QT_QTOPENGL_LIBRARY})
+    target_link_libraries(SeExpr2Editor ${Qt5Core_LIBRARIES})
+    target_link_libraries(SeExpr2Editor ${Qt5Gui_LIBRARIES})
+    target_link_libraries(SeExpr2Editor ${Qt5OpenGL_LIBRARIES})
     target_link_libraries(SeExpr2Editor ${GLUT_LIBRARY} ${OPENGL_LIBRARY})
 
     if (DEFINED ANIMLIB_DIR)

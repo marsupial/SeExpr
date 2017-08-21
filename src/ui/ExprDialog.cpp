@@ -25,8 +25,8 @@
 #include "ExprControlCollection.h"
 
 #include <QtCore/QDir>
-#include <QtGui/QApplication>
-#include <QtGui/QLabel>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <iostream>
 #include <fstream>
 

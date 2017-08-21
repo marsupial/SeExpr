@@ -22,15 +22,15 @@
 #define _MY_EXPR_EDITOR_H
 
 #include <QtCore/QObject>
-#include <QtGui/QMessageBox>
+#include <QtWidgets/QMessageBox>
 #include <QtOpenGL/QGLWidget>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QSplitter>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QSplitter>
 #include <QtGui/QPalette>
-#include <QtGui/QPushButton>
-#include <QtGui/QFileDialog>
-#include <QtGui/QSpacerItem>
-#include <QtGui/QSizePolicy>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QFileDialog>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QSizePolicy>
 
 #include <iostream>
 #include <fstream>

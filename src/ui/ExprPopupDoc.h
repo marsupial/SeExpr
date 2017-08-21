@@ -17,7 +17,7 @@
 #ifndef _ExprPopupDoc_h_
 #define _ExprPopupDoc_h
 
-#include <QtGui/QWidget>
+#include <QtWidgets/QWidget>
 
 class QLabel;
 class ExprPopupDoc : public QWidget {
