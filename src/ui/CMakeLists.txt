@@ -128,33 +128,35 @@ if(QT4_FOUND)
 
     # Generate python module expreditor2, using sip
     find_program(SIP_EXEC sip)
-    set(SIP_QT_TAG -t Qt_4_8_0)
+    if (SIP_EXEC)
+        set(SIP_QT_TAG -t Qt_5_6_1)
 
-    set(CMAKE_CXX_FLAGS "-std=c++11")
-    include_directories(${SIP_INCLUDE_DIR} ${PYQT4_SIP}
-                        ${PYTHON_INCLUDE_DIR} ${QT_INCLUDE_DIR}/QtCore
-                        ${QT_INCLUDE_DIR}/QtGui)
+        set(CMAKE_CXX_FLAGS "-std=c++11")
+        include_directories(${SIP_INCLUDE_DIR} ${PYQT4_SIP}
+                            ${PYTHON_INCLUDE_DIR} ${QT_INCLUDE_DIR}/QtCore
+                            ${QT_INCLUDE_DIR}/QtGui)
 
-    add_custom_command(OUTPUT sipexpreditor2part0.cpp
-                       DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/SeExpr2Editor.sip
-                       COMMENT 'Processing SeExpr2Editor.sip'
-                       COMMAND ${SIP_EXEC} -w -c .
-                       -x VendorID -x PyQt_NoPrintRangeBug -x Py_v3
-                       ${SIP_QT_TAG}
-                       -t WS_X11 -g -j 1
-                       -I. -I${PYQT4_SIP} -I${SIP_INCLUDE_DIR}
-                       ${CMAKE_CURRENT_SOURCE_DIR}/SeExpr2Editor.sip
-                       VERBATIM)
+        add_custom_command(OUTPUT sipexpreditor2part0.cpp
+                           DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/SeExpr2Editor.sip
+                           COMMENT 'Processing SeExpr2Editor.sip'
+                           COMMAND ${SIP_EXEC} -w -c .
+                           -x VendorID -x PyQt_NoPrintRangeBug -x Py_v3
+                           ${SIP_QT_TAG}
+                           -t WS_X11 -g -j 1
+                           -I. -I${PYQT4_SIP} -I${SIP_INCLUDE_DIR}
+                           ${CMAKE_CURRENT_SOURCE_DIR}/SeExpr2Editor.sip
+                           VERBATIM)
 
-    add_library(expreditor2 SHARED sipexpreditor2part0.cpp)
-    target_link_libraries(expreditor2 SeExpr2Editor ${SEEXPR_LIBRARIES}
-                          ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY}
-                          ${QT_QTOPENGL_LIBRARY} ${OPENGL_LIBRARY}
-                          ${GLUT_LIBRARY} ${PYTHON_LIBRARIES})
+        add_library(expreditor2 SHARED sipexpreditor2part0.cpp)
+        target_link_libraries(expreditor2 SeExpr2Editor ${SEEXPR_LIBRARIES}
+                              ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY}
+                              ${QT_QTOPENGL_LIBRARY} ${OPENGL_LIBRARY}
+                              ${GLUT_LIBRARY} ${PYTHON_LIBRARIES})
 
-    # No prefix on python module name
-    set_target_properties(expreditor2 PROPERTIES PREFIX "")
-    install(TARGETS expreditor2 DESTINATION ${CMAKE_INSTALL_PYTHON})
-    install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/__init__.py
-            DESTINATION ${CMAKE_INSTALL_PYTHON})
+        # No prefix on python module name
+        set_target_properties(expreditor2 PROPERTIES PREFIX "")
+        install(TARGETS expreditor2 DESTINATION ${CMAKE_INSTALL_PYTHON})
+        install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/__init__.py
+                DESTINATION ${CMAKE_INSTALL_PYTHON})
+    endif(SIP_EXEC)
 endif()

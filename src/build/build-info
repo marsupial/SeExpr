@@ -10,7 +10,6 @@ if 'MACOSX_DEPLOYMENT_TARGET' in os.environ:
     del os.environ['MACOSX_DEPLOYMENT_TARGET']
 from distutils import sysconfig as sc
 
-import sipconfig
 
 def main():
     parser = argparse.ArgumentParser()
@@ -61,6 +60,7 @@ def pyqt4_sip(args):
 
 
 def sip_inc(args):
+    import sipconfig
     pkg_cfg = sipconfig._pkg_config
     return pkg_cfg['sip_inc_dir']
 
