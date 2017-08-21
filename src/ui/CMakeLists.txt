@@ -56,7 +56,7 @@ if(QT4_FOUND)
         ExprShortEdit.h ExprDeepWater.h)
 
     set(EDITOR_CPPS ExprFileDialog.cpp ExprControl.cpp
-        ExprEditor.cpp ExprMain.cpp ExprShortEdit.cpp
+        ExprEditor.cpp ExprShortEdit.cpp
         ExprCurve.cpp  ExprColorCurve.cpp ExprColorSwatch.cpp
         EditableExpression.cpp ExprPopupDoc.cpp
         ExprCompletionModel.cpp ExprDialog.cpp
@@ -121,6 +121,10 @@ if(QT4_FOUND)
     endif()
 
     install(TARGETS SeExpr2Editor DESTINATION ${CMAKE_INSTALL_LIBDIR})
+
+    add_executable(SeExpr2Viewer ExprMain.cpp)
+    target_link_libraries(SeExpr2Viewer SeExpr2Editor SeExpr2)
+    install(TARGETS SeExpr2Viewer DESTINATION ${CMAKE_INSTALL_BINDIR})
 
     # Setup header files
     file(GLOB public_includes "*.h")
