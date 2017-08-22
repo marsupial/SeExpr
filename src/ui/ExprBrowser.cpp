@@ -133,7 +133,7 @@ class ExprTreeModel : public QAbstractItemModel {
 
     ~ExprTreeModel() { delete root; }
 
-    void update() { reset(); }
+    void update() { clear(); }
 
     void clear() {
         root->clear();
@@ -194,7 +194,7 @@ class ExprTreeModel : public QAbstractItemModel {
         ExprTreeItem* item = root->find(path);
         if (!item) {
             root->regen();
-            reset();
+            clear();
             item = root->find(path);
         }
         if (item) {
@@ -210,7 +210,7 @@ class ExprTreeFilterModel : public QSortFilterProxyModel {
   public:
     ExprTreeFilterModel(QWidget* parent = 0) : QSortFilterProxyModel(parent) {}
 
-    void update() { reset(); }
+    void update() { clear(); }
 
     bool filterAcceptsRow(int sourceRow, const QModelIndex& sourceParent) const {
         if (sourceParent.isValid() && sourceModel()->data(sourceParent).toString().contains(filterRegExp()))

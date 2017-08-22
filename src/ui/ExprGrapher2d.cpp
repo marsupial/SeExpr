@@ -20,6 +20,7 @@
 */
 
 #include "ExprGrapher2d.h"
+#include <QtWidgets/QApplication>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLineEdit>
 #include <QtGui/QDoubleValidator>
@@ -85,8 +86,8 @@ void ExprGrapherWidget::update() {
 void ExprGrapherWidget::forwardPreview() { emit preview(); }
 
 ExprGrapherView::ExprGrapherView(ExprGrapherWidget& widget, QWidget* parent, int width, int height)
-    : QGLWidget(parent), widget(widget), _image(NULL), _width(width), _height(height), scaling(false),
-      translating(false) {
+    : QGLWidget(parent), widget(widget), _image(NULL), _width(width*qApp->devicePixelRatio()),
+      _height(height*qApp->devicePixelRatio()), scaling(false), translating(false) {
     this->setFixedSize(width, height);
 
     _image = new float[3 * _width * _height];
